@@ -5,7 +5,7 @@
 
 // nfc provides javascript wrappers to the native phonegap implementation
 var nfc = {
-    HelloToast: function (callback, win, fail) {
+    HelloToast: function (win, fail) {
         cordova.exec(win, fail, "NfcPlugin", "HelloToast", []);
     }
 };
