@@ -35,11 +35,7 @@ public class NfcPlugin extends CordovaPlugin /*implements NfcAdapter.OnNdefPushC
     // code runs in a thread
     
     public void HelloToast() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText("hola").show();
-            }
-        });
+        Context context=this.cordova.getActivity().getApplicationContext();
+        Toast.makeText(context, "hola", Toast.LENGTH_SHORT).show();
     }
 }
